@@ -3,10 +3,10 @@ package ru.yandex.practicum.sleeptracker.fileworks.exceptions;
 import java.nio.file.Path;
 
 public class LogFileNotFoundException extends RuntimeException {
-    public final Path File;
+    public final Path LogFile;
 
-    public LogFileNotFoundException(Path file) {
+    public LogFileNotFoundException(Path logFile) {
         super("Файл лога не найден.");
-        File = file;
+        LogFile = logFile;
     }
 }
