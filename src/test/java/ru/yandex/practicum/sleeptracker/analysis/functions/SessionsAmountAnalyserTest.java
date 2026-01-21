@@ -13,7 +13,7 @@ public class SessionsAmountAnalyserTest {
     private static final SessionsAmountAnalyser ANALYSER = new SessionsAmountAnalyser();
 
     @Test
-    public void SingleSession() {
+    public void singleSession() {
         List<SleepingSession> sessions = List.of(
                 create()
         );
@@ -22,7 +22,7 @@ public class SessionsAmountAnalyserTest {
     }
 
     @Test
-    public void MultipleSessions() {
+    public void multipleSessions() {
         List<SleepingSession> sessions = List.of(
                 create(),
                 create(),

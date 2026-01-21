@@ -13,7 +13,7 @@ public class MinDurationAnalyserTest {
     private static final MinDurationAnalyser ANALYSER = new MinDurationAnalyser();
 
     @Test
-    public void SingleDuration() {
+    public void singleDuration() {
         List<SleepingSession> sessions = List.of(
                 createWithDuration(90)
         );
@@ -22,7 +22,7 @@ public class MinDurationAnalyserTest {
     }
 
     @Test
-    public void EqualDurations() {
+    public void equalDurations() {
         List<SleepingSession> sessions = List.of(
                 createWithDuration(90),
                 createWithDuration(90),

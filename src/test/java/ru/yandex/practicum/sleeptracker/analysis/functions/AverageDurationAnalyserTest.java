@@ -13,7 +13,7 @@ public class AverageDurationAnalyserTest {
     private static final AverageDurationAnalyser ANALYSER = new AverageDurationAnalyser();
 
     @Test
-    public void EqualDurations() {
+    public void equalDurations() {
         List<SleepingSession> sessions = List.of(
                 Tests.createWithDuration(90),
                 Tests.createWithDuration(90),
@@ -24,7 +24,7 @@ public class AverageDurationAnalyserTest {
     }
 
     @Test
-    public void RoundDown() {
+    public void roundDown() {
         List<SleepingSession> sessions = List.of(
                 Tests.createWithDuration(90),
                 Tests.createWithDuration(45)

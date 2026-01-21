@@ -14,7 +14,7 @@ public class SleeplessNightsAnalyserTest {
     private static final SleeplessNightsAnalyser ANALYSER = new SleeplessNightsAnalyser();
 
     @Test
-    public void SingleNight_Normal() {
+    public void singleNight_Normal() {
         List<SleepingSession> sessions = List.of(
                 create(1, 23, 5)
         );
@@ -23,7 +23,7 @@ public class SleeplessNightsAnalyserTest {
     }
 
     @Test
-    public void SingleNight_Normal_LeftBorder() {
+    public void singleNight_Normal_LeftBorder() {
         List<SleepingSession> sessions = List.of(
                 create(1, 20, 0)
         );
@@ -32,7 +32,7 @@ public class SleeplessNightsAnalyserTest {
     }
 
     @Test
-    public void SingleNight_Normal_RightBorder() {
+    public void singleNight_Normal_RightBorder() {
         List<SleepingSession> sessions = List.of(
                 create(1, 6, 13)
         );
@@ -41,7 +41,7 @@ public class SleeplessNightsAnalyserTest {
     }
 
     @Test
-    public void SingleNight_Normal_BothBorders() {
+    public void singleNight_Normal_BothBorders() {
         List<SleepingSession> sessions = List.of(
                 create(1, 0, 6)
         );
@@ -50,7 +50,7 @@ public class SleeplessNightsAnalyserTest {
     }
 
     @Test
-    public void SingleNight_Normal_NextDayAwake() {
+    public void singleNight_Normal_NextDayAwake() {
         List<SleepingSession> sessions = List.of(
                 create(1, 23, 7)
         );
@@ -59,7 +59,7 @@ public class SleeplessNightsAnalyserTest {
     }
 
     @Test
-    public void SingleNight_Normal_NextMonthAwake() {
+    public void singleNight_Normal_NextMonthAwake() {
         List<SleepingSession> sessions = List.of(
                 create(LocalDate.of(2026, 1, 31), 23, 7)
         );
@@ -68,7 +68,7 @@ public class SleeplessNightsAnalyserTest {
     }
 
     @Test
-    public void SingleNight_Sleepless() {
+    public void singleNight_Sleepless() {
         List<SleepingSession> sessions = List.of(
                 create(1, 7, 20)
         );
@@ -77,7 +77,7 @@ public class SleeplessNightsAnalyserTest {
     }
 
     @Test
-    public void AllNormal() {
+    public void allNormal() {
         List<SleepingSession> sessions = List.of(
                 create(1, 21, 5),
                 create(2, 0, 6),
@@ -88,7 +88,7 @@ public class SleeplessNightsAnalyserTest {
     }
 
     @Test
-    public void NormalAfterSleepless() {
+    public void normalAfterSleepless() {
         List<SleepingSession> sessions = List.of(
                 create(1, 15, 20),
                 create(1, 21, 1)
@@ -98,7 +98,7 @@ public class SleeplessNightsAnalyserTest {
     }
 
     @Test
-    public void AllSleepless_AfterNoon() {
+    public void allSleepless_AfterNoon() {
         List<SleepingSession> sessions = List.of(
                 create(1, 16, 23),
                 create(2, 14, 22),
@@ -109,7 +109,7 @@ public class SleeplessNightsAnalyserTest {
     }
 
     @Test
-    public void AllSleepless_BeforeNoon() {
+    public void allSleepless_BeforeNoon() {
         List<SleepingSession> sessions = List.of(
                 create(1, 7, 11),
                 create(2, 8, 10),
@@ -120,7 +120,7 @@ public class SleeplessNightsAnalyserTest {
     }
 
     @Test
-    public void AllSleepless_TwoSessions_OneNight() {
+    public void allSleepless_TwoSessions_OneNight() {
         List<SleepingSession> sessions = List.of(
                 create(1, 16, 20),
                 create(2, 8, 10)
@@ -130,7 +130,7 @@ public class SleeplessNightsAnalyserTest {
     }
 
     @Test
-    public void AllSleepless_ThreeSessions_TwoNights() {
+    public void allSleepless_ThreeSessions_TwoNights() {
         List<SleepingSession> sessions = List.of(
                 create(1, 16, 20),
                 create(2, 8, 10),
@@ -141,7 +141,7 @@ public class SleeplessNightsAnalyserTest {
     }
 
     @Test
-    public void AllSleepless_MultipleSession_OneDayWithoutSessions() {
+    public void allSleepless_MultipleSession_OneDayWithoutSessions() {
         List<SleepingSession> sessions = List.of(
                 create(1, 16, 20),
                 create(3, 16, 20)
@@ -151,7 +151,7 @@ public class SleeplessNightsAnalyserTest {
     }
 
     @Test
-    public void AllSleepless_MultipleSession_MultipleDaysWithoutSessions() {
+    public void allSleepless_MultipleSession_MultipleDaysWithoutSessions() {
         List<SleepingSession> sessions = List.of(
                 create(1, 16, 20),
                 create(5, 16, 20)

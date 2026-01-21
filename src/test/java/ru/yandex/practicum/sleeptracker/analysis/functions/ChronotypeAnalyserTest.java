@@ -13,7 +13,7 @@ public class ChronotypeAnalyserTest {
     private static final ChronotypeAnalyser ANALYSER = new ChronotypeAnalyser();
     
     @Test
-    public void Owl_SingleSession() {
+    public void owl_SingleSession() {
         List<SleepingSession> sessions = List.of(
                 create(1, 0, 10)
         );
@@ -22,7 +22,7 @@ public class ChronotypeAnalyserTest {
     }
 
     @Test
-    public void Owl_SingleSession_LeftBorder() {
+    public void owl_SingleSession_LeftBorder() {
         List<SleepingSession> sessions = List.of(
                 create(1, 23, 10)
         );
@@ -31,7 +31,7 @@ public class ChronotypeAnalyserTest {
     }
 
     @Test
-    public void Owl_SingleSession_RightBorder() {
+    public void owl_SingleSession_RightBorder() {
         List<SleepingSession> sessions = List.of(
                 create(1, 0, 9)
         );
@@ -40,7 +40,7 @@ public class ChronotypeAnalyserTest {
     }
 
     @Test
-    public void Owl() {
+    public void owl() {
         List<SleepingSession> sessions = List.of(
                 create(1, 0, 11),     // OWL
                 create(2, 23, 10),    // OWL
@@ -52,7 +52,7 @@ public class ChronotypeAnalyserTest {
     }
 
     @Test
-    public void Lark_SingleSession() {
+    public void lark_SingleSession() {
         List<SleepingSession> sessions = List.of(
                 create(1, 21, 6)
         );
@@ -61,7 +61,7 @@ public class ChronotypeAnalyserTest {
     }
 
     @Test
-    public void Lark_SingleSession_LeftBorder() {
+    public void lark_SingleSession_LeftBorder() {
         List<SleepingSession> sessions = List.of(
                 create(1, 22, 6)
         );
@@ -70,7 +70,7 @@ public class ChronotypeAnalyserTest {
     }
 
     @Test
-    public void Lark_SingleSession_RightBorder() {
+    public void lark_SingleSession_RightBorder() {
         List<SleepingSession> sessions = List.of(
                 create(1, 21, 7)
         );
@@ -79,7 +79,7 @@ public class ChronotypeAnalyserTest {
     }
 
     @Test
-    public void Lark() {
+    public void lark() {
         List<SleepingSession> sessions = List.of(
                 create(1, 21, 6),     // LARK
                 create(2, 0, 9),      // OWL
@@ -91,7 +91,7 @@ public class ChronotypeAnalyserTest {
     }
 
     @Test
-    public void Hummingbird_SingleSession() {
+    public void hummingbird_SingleSession() {
         List<SleepingSession> sessions = List.of(
                 create(1, 21, 8)
         );
@@ -100,7 +100,7 @@ public class ChronotypeAnalyserTest {
     }
 
     @Test
-    public void Hummingbird() {
+    public void hummingbird() {
         List<SleepingSession> sessions = List.of(
                 create(1, 21, 8),     // HUMMINGBIRD
                 create(2, 20, 6),     // LARK
@@ -112,7 +112,7 @@ public class ChronotypeAnalyserTest {
     }
 
     @Test
-    public void Hummingbird_OwlAndLarkAreEqual() {
+    public void hummingbird_OwlAndLarkAreEqual() {
         List<SleepingSession> sessions = List.of(
                 create(1, 21, 5),     // LARK
                 create(2, 20, 6),     // LARK
@@ -124,7 +124,7 @@ public class ChronotypeAnalyserTest {
     }
 
     @Test
-    public void Hummingbird_AllAreEqual() {
+    public void hummingbird_AllAreEqual() {
         List<SleepingSession> sessions = List.of(
                 create(1, 21, 5),     // LARK
                 create(2, 20, 8),     // HUMMINGBIRD

@@ -14,7 +14,7 @@ public class BadAmountAnalyserTest {
     private static final BadAmountAnalyser ANALYSER = new BadAmountAnalyser();
 
     @Test
-    public void NoBad() {
+    public void noBad() {
         List<SleepingSession> sessions = List.of(
                 Tests.createWithQuality(SleepQuality.NORMAL),
                 Tests.createWithQuality(SleepQuality.GOOD)
@@ -24,7 +24,7 @@ public class BadAmountAnalyserTest {
     }
 
     @Test
-    public void AllBad() {
+    public void allBad() {
         List<SleepingSession> sessions = List.of(
                 Tests.createWithQuality(SleepQuality.BAD),
                 Tests.createWithQuality(SleepQuality.BAD),
