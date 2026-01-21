@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class LogLoaderTest {
-    private static final Path LOG_PATH = Paths.get("src\\main\\resources\\sleep_log.txt");
+    private static final Path LOG_PATH = Paths.get("README.md");
     private static final Path LOG_PATH_SINGLE_STRING = Paths.get("src\\test\\resources\\sleep_log_test_SingleString.txt");
     private static final Path LOG_PATH_NO_STRINGS = Paths.get("src\\test\\resources\\sleep_log_test_NoStrings.txt");
     private static final Path LOG_PATH_ABSENT_FILE = Paths.get("src\\test\\resources\\sleep_log_test_AbsentFile.txt");
