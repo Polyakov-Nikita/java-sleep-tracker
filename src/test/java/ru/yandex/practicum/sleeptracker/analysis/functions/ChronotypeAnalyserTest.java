@@ -18,7 +18,7 @@ public class ChronotypeAnalyserTest {
                 create(1, 0, 10)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("сова", result.Value);
+        assertEquals("сова", result.value);
     }
 
     @Test
@@ -27,7 +27,7 @@ public class ChronotypeAnalyserTest {
                 create(1, 23, 10)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("сова", result.Value);
+        assertEquals("сова", result.value);
     }
 
     @Test
@@ -36,7 +36,7 @@ public class ChronotypeAnalyserTest {
                 create(1, 0, 9)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("сова", result.Value);
+        assertEquals("сова", result.value);
     }
 
     @Test
@@ -48,7 +48,7 @@ public class ChronotypeAnalyserTest {
                 create(4, 21, 5)      // LARK
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("сова", result.Value);
+        assertEquals("сова", result.value);
     }
 
     @Test
@@ -57,7 +57,7 @@ public class ChronotypeAnalyserTest {
                 create(1, 21, 6)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("жаворонок", result.Value);
+        assertEquals("жаворонок", result.value);
     }
 
     @Test
@@ -66,7 +66,7 @@ public class ChronotypeAnalyserTest {
                 create(1, 22, 6)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("жаворонок", result.Value);
+        assertEquals("жаворонок", result.value);
     }
 
     @Test
@@ -75,7 +75,7 @@ public class ChronotypeAnalyserTest {
                 create(1, 21, 7)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("жаворонок", result.Value);
+        assertEquals("жаворонок", result.value);
     }
 
     @Test
@@ -87,7 +87,7 @@ public class ChronotypeAnalyserTest {
                 create(3, 20, 8)      // HUMMINGBIRD
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("жаворонок", result.Value);
+        assertEquals("жаворонок", result.value);
     }
 
     @Test
@@ -96,7 +96,7 @@ public class ChronotypeAnalyserTest {
                 create(1, 21, 8)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("голубь", result.Value);
+        assertEquals("голубь", result.value);
     }
 
     @Test
@@ -108,7 +108,7 @@ public class ChronotypeAnalyserTest {
                 create(3, 22, 12)     // HUMMINGBIRD
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("голубь", result.Value);
+        assertEquals("голубь", result.value);
     }
 
     @Test
@@ -120,7 +120,7 @@ public class ChronotypeAnalyserTest {
                 create(3, 1, 12)      // OWL
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("голубь", result.Value);
+        assertEquals("голубь", result.value);
     }
 
     @Test
@@ -131,6 +131,6 @@ public class ChronotypeAnalyserTest {
                 create(3, 1, 12)      // OWL
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("голубь", result.Value);
+        assertEquals("голубь", result.value);
     }
 }

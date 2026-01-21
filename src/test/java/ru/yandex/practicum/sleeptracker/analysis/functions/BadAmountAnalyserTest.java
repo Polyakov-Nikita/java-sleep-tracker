@@ -20,7 +20,7 @@ public class BadAmountAnalyserTest {
                 Tests.createWithQuality(SleepQuality.GOOD)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("0", result.Value);
+        assertEquals("0", result.value);
     }
 
     @Test
@@ -32,6 +32,6 @@ public class BadAmountAnalyserTest {
                 Tests.createWithQuality(SleepQuality.BAD)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("4", result.Value);
+        assertEquals("4", result.value);
     }
 }

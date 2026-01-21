@@ -18,7 +18,7 @@ public class MaxDurationAnalyserTest {
                 createWithDuration(90)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("90 мин.", result.Value);
+        assertEquals("90 мин.", result.value);
     }
 
     @Test
@@ -29,6 +29,6 @@ public class MaxDurationAnalyserTest {
                 createWithDuration(90)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("90 мин.", result.Value);
+        assertEquals("90 мин.", result.value);
     }
 }

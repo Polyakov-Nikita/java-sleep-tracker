@@ -18,7 +18,7 @@ public class SessionsAmountAnalyserTest {
                 create()
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("1", result.Value);
+        assertEquals("1", result.value);
     }
 
     @Test
@@ -29,6 +29,6 @@ public class SessionsAmountAnalyserTest {
                 create()
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("3", result.Value);
+        assertEquals("3", result.value);
     }
 }

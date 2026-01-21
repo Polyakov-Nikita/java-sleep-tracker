@@ -72,6 +72,6 @@ public class SleepTrackerApp {
     }
 
     private static void printResult(SleepAnalysisResult result, int order) {
-        System.out.printf("%3d. | %-50s | %10s%n", order, result.Description, result.Value);
+        System.out.printf("%3d. | %-50s | %10s%n", order, result.description, result.value);
     }
 }

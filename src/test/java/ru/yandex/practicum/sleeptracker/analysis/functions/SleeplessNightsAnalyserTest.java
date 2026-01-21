@@ -19,7 +19,7 @@ public class SleeplessNightsAnalyserTest {
                 create(1, 23, 5)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("0", result.Value);
+        assertEquals("0", result.value);
     }
 
     @Test
@@ -28,7 +28,7 @@ public class SleeplessNightsAnalyserTest {
                 create(1, 20, 0)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("0", result.Value);
+        assertEquals("0", result.value);
     }
 
     @Test
@@ -37,7 +37,7 @@ public class SleeplessNightsAnalyserTest {
                 create(1, 6, 13)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("0", result.Value);
+        assertEquals("0", result.value);
     }
 
     @Test
@@ -46,7 +46,7 @@ public class SleeplessNightsAnalyserTest {
                 create(1, 0, 6)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("0", result.Value);
+        assertEquals("0", result.value);
     }
 
     @Test
@@ -55,7 +55,7 @@ public class SleeplessNightsAnalyserTest {
                 create(1, 23, 7)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("0", result.Value);
+        assertEquals("0", result.value);
     }
 
     @Test
@@ -64,7 +64,7 @@ public class SleeplessNightsAnalyserTest {
                 create(LocalDate.of(2026, 1, 31), 23, 7)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("0", result.Value);
+        assertEquals("0", result.value);
     }
 
     @Test
@@ -73,7 +73,7 @@ public class SleeplessNightsAnalyserTest {
                 create(1, 7, 20)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("1", result.Value);
+        assertEquals("1", result.value);
     }
 
     @Test
@@ -84,7 +84,7 @@ public class SleeplessNightsAnalyserTest {
                 create(3, 1, 15)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("0", result.Value);
+        assertEquals("0", result.value);
     }
 
     @Test
@@ -94,7 +94,7 @@ public class SleeplessNightsAnalyserTest {
                 create(1, 21, 1)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("0", result.Value);
+        assertEquals("0", result.value);
     }
 
     @Test
@@ -105,7 +105,7 @@ public class SleeplessNightsAnalyserTest {
                 create(3, 13, 19)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("3", result.Value);
+        assertEquals("3", result.value);
     }
 
     @Test
@@ -116,7 +116,7 @@ public class SleeplessNightsAnalyserTest {
                 create(3, 9, 11)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("3", result.Value);
+        assertEquals("3", result.value);
     }
 
     @Test
@@ -126,7 +126,7 @@ public class SleeplessNightsAnalyserTest {
                 create(2, 8, 10)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("1", result.Value);
+        assertEquals("1", result.value);
     }
 
     @Test
@@ -137,7 +137,7 @@ public class SleeplessNightsAnalyserTest {
                 create(3, 7, 11)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("2", result.Value);
+        assertEquals("2", result.value);
     }
 
     @Test
@@ -147,7 +147,7 @@ public class SleeplessNightsAnalyserTest {
                 create(3, 16, 20)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("3", result.Value);
+        assertEquals("3", result.value);
     }
 
     @Test
@@ -157,6 +157,6 @@ public class SleeplessNightsAnalyserTest {
                 create(5, 16, 20)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("5", result.Value);
+        assertEquals("5", result.value);
     }
 }

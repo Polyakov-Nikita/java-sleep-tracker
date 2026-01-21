@@ -20,7 +20,7 @@ public class AverageDurationAnalyserTest {
                 Tests.createWithDuration(90)
         );
         SleepAnalysisResult result = new AverageDurationAnalyser().apply(sessions);
-        assertEquals("90 мин.", result.Value);
+        assertEquals("90 мин.", result.value);
     }
 
     @Test
@@ -30,7 +30,7 @@ public class AverageDurationAnalyserTest {
                 Tests.createWithDuration(45)
         );
         SleepAnalysisResult result = ANALYSER.apply(sessions);
-        assertEquals("67 мин.", result.Value);
+        assertEquals("67 мин.", result.value);
     }
 }
 
