@@ -30,7 +30,7 @@ public class LogLoaderTest {
                 LocalDateTime.of(2025, 10, 2, 7, 30),
                 SleepQuality.GOOD
         );
-        SleepingSession session2= new SleepingSession(
+        SleepingSession session2 = new SleepingSession(
                 LocalDateTime.of(2025, 10, 2, 23, 50),
                 LocalDateTime.of(2025, 10, 3, 6, 40),
                 SleepQuality.NORMAL
