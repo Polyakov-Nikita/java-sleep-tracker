@@ -33,10 +33,10 @@ public class SleeplessNightsAnalyser implements Function<List<SleepingSession>, 
     }
 
     private LocalDate getDay(SleepingSession session) {
-        if (session.Start.toLocalTime().isBefore(DAYS_BORDER)) {
-            return session.Start.toLocalDate().minusDays(1);
+        if (session.start.toLocalTime().isBefore(DAYS_BORDER)) {
+            return session.start.toLocalDate().minusDays(1);
         }
-        return session.Start.toLocalDate();
+        return session.start.toLocalDate();
     }
 
     private void fillInfo(SleepingSession session) {
@@ -45,10 +45,10 @@ public class SleeplessNightsAnalyser implements Function<List<SleepingSession>, 
     }
 
     private boolean inSleepTimeBounds(SleepingSession session) {
-        if (session.Start.toLocalDate().isBefore(session.End.toLocalDate())) {
+        if (session.start.toLocalDate().isBefore(session.end.toLocalDate())) {
             return true;
         }
-        LocalTime start = session.Start.toLocalTime();
+        LocalTime start = session.start.toLocalTime();
         return start.isBefore(SLEEP_TIME_RIGHT) || start.equals(SLEEP_TIME_RIGHT);
     }
 

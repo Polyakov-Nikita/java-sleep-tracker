@@ -11,7 +11,7 @@ public class MinDurationAnalyser implements Function<List<SleepingSession>, Slee
     @Override
     public SleepAnalysisResult apply(List<SleepingSession> sessions) {
         long min = sessions.stream()
-                .map(session -> Duration.between(session.Start, session.End))
+                .map(session -> Duration.between(session.start, session.end))
                 .min(Duration::compareTo)
                 .orElse(Duration.ofMinutes(0))
                 .toMinutes();

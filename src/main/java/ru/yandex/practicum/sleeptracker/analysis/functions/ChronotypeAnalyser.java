@@ -42,15 +42,15 @@ public class ChronotypeAnalyser implements Function<List<SleepingSession>, Sleep
     }
 
     private boolean isOwlSession(SleepingSession session) {
-        LocalTime start = session.Start.toLocalTime();
-        LocalTime end = session.End.toLocalTime();
+        LocalTime start = session.start.toLocalTime();
+        LocalTime end = session.end.toLocalTime();
         return !(start.isAfter(end) && start.isBefore(OWL_LEFT))
                 && (end.isAfter(OWL_RIGHT) || end.equals(OWL_RIGHT));
     }
 
     private boolean isLarkSession(SleepingSession session) {
-        LocalTime start = session.Start.toLocalTime();
-        LocalTime end = session.End.toLocalTime();
+        LocalTime start = session.start.toLocalTime();
+        LocalTime end = session.end.toLocalTime();
         return (start.isBefore(LARK_LEFT) || start.equals(LARK_LEFT))
                 && (end.isBefore(LARK_RIGHT) || end.equals(LARK_RIGHT));
     }

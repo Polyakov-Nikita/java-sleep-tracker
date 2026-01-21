@@ -5,34 +5,34 @@ import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 public class SleepingSession {
-    public final LocalDateTime Start;
-    public final LocalDateTime End;
-    public final SleepQuality Quality;
+    public final LocalDateTime start;
+    public final LocalDateTime end;
+    public final SleepQuality quality;
 
     private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
 
     public SleepingSession(LocalDateTime start, LocalDateTime end, SleepQuality quality) {
-        Start = start;
-        End = end;
-        Quality = quality;
+        this.start = start;
+        this.end = end;
+        this.quality = quality;
     }
 
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         SleepingSession that = (SleepingSession) o;
-        return Objects.equals(Start, that.Start) && Objects.equals(End, that.End) && Quality == that.Quality;
+        return Objects.equals(start, that.start) && Objects.equals(end, that.end) && quality == that.quality;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(Start, End, Quality);
+        return Objects.hash(start, end, quality);
     }
 
     @Override
     public String toString() {
-        return Start.format(formatter) +
-                " - " + End.format(formatter) +
-                ", " + Quality;
+        return start.format(formatter) +
+                " - " + end.format(formatter) +
+                ", " + quality;
     }
 }

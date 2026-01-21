@@ -11,7 +11,7 @@ public class AverageDurationAnalyser implements Function<List<SleepingSession>, 
     @Override
     public SleepAnalysisResult apply(List<SleepingSession> sessions) {
         long average = (long) sessions.stream()
-                .map(session -> Duration.between(session.Start, session.End))
+                .map(session -> Duration.between(session.start, session.end))
                 .mapToInt(duration -> (int) duration.toMinutes())
                 .average()
                 .orElse(0.0);

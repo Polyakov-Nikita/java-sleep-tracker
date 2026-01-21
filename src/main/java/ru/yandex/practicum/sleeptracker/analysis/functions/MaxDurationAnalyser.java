@@ -11,7 +11,7 @@ public class MaxDurationAnalyser implements Function<List<SleepingSession>, Slee
     @Override
     public SleepAnalysisResult apply(List<SleepingSession> sessions) {
         long max = sessions.stream()
-                .map(session -> Duration.between(session.Start, session.End))
+                .map(session -> Duration.between(session.start, session.end))
                 .max(Duration::compareTo)
                 .orElse(Duration.ofMinutes(0))
                 .toMinutes();

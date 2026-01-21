@@ -11,7 +11,7 @@ public class BadAmountAnalyser implements Function<List<SleepingSession>, SleepA
     @Override
     public SleepAnalysisResult apply(List<SleepingSession> sessions) {
         int amount = sessions.stream()
-                .filter(session -> session.Quality == SleepQuality.BAD)
+                .filter(session -> session.quality == SleepQuality.BAD)
                 .toList().size();
         return new SleepAnalysisResult("количество сессий с плохим качеством сна", Integer.toString(amount));
     }
