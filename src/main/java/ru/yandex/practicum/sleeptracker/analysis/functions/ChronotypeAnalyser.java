@@ -56,7 +56,7 @@ public class ChronotypeAnalyser implements Function<List<SleepingSession>, Sleep
     }
 
     private String analyseCounters() {
-        if(owlCount > lark && owlCount > hummingbirdCount) {
+        if (owlCount > lark && owlCount > hummingbirdCount) {
             return "сова";
         } else if (lark > owlCount && lark > hummingbirdCount) {
             return "жаворонок";
