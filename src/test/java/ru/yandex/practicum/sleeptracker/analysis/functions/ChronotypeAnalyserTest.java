@@ -11,7 +11,7 @@ import static ru.yandex.practicum.sleeptracker.Tests.create;
 
 public class ChronotypeAnalyserTest {
     private static final ChronotypeAnalyser ANALYSER = new ChronotypeAnalyser();
-    
+
     @Test
     public void owl_SingleSession() {
         List<SleepingSession> sessions = List.of(
