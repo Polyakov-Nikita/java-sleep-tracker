@@ -7,7 +7,7 @@ import ru.yandex.practicum.sleeptracker.session.SleepingSession;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static ru.yandex.practicum.sleeptracker.Tests.createWithDuration;
+import static ru.yandex.practicum.sleeptracker.utils.UtilityTest.createWithDuration;
 
 public class MinDurationAnalyserTest {
     private static final MinDurationAnalyser ANALYSER = new MinDurationAnalyser();

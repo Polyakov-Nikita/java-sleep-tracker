@@ -11,6 +11,7 @@ import java.util.function.Function;
 import java.util.stream.IntStream;
 
 public class SleeplessNightsAnalyser implements Function<List<SleepingSession>, SleepAnalysisResult> {
+    private static final String DESCRIPTION = "количество бессонных ночей";
     private static final LocalTime DAYS_BORDER = LocalTime.of(12, 0);
     private static final LocalTime SLEEP_TIME_RIGHT = LocalTime.of(6, 0);
 
@@ -22,7 +23,7 @@ public class SleeplessNightsAnalyser implements Function<List<SleepingSession>, 
         createDaysInfo(sessions);
         sessions.forEach(this::fillInfo);
         int amount = analyseDaysInfo();
-        return new SleepAnalysisResult("количество бессонных ночей", Integer.toString(amount));
+        return new SleepAnalysisResult(DESCRIPTION, Integer.toString(amount));
     }
 
     private void createDaysInfo(List<SleepingSession> sessions) {

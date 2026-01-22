@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.function.Function;
 
 public class MaxDurationAnalyser implements Function<List<SleepingSession>, SleepAnalysisResult> {
+    private static final String DESCRIPTION = "максимальная продолжительность сессии";
+
     @Override
     public SleepAnalysisResult apply(List<SleepingSession> sessions) {
         long max = sessions.stream()
@@ -15,6 +17,6 @@ public class MaxDurationAnalyser implements Function<List<SleepingSession>, Slee
                 .max(Duration::compareTo)
                 .orElse(Duration.ofMinutes(0))
                 .toMinutes();
-        return new SleepAnalysisResult("максимальная продолжительность сессии", max + " мин.");
+        return new SleepAnalysisResult(DESCRIPTION, max + " мин.");
     }
 }

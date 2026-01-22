@@ -5,15 +5,12 @@ import ru.yandex.practicum.sleeptracker.analysis.functions.*;
 import ru.yandex.practicum.sleeptracker.fileworks.LogLoader;
 import ru.yandex.practicum.sleeptracker.session.SleepingSession;
 
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
-import java.util.stream.IntStream;
 
 public class SleepTrackerApp {
-    private static final Path LOG_PATH = Paths.get("src\\main\\resources\\sleep_log.txt");
     private static final List<Function<List<SleepingSession>, SleepAnalysisResult>> FUNCTIONS = new ArrayList<>(List.of(
             new SessionsAmountAnalyser(),
             new MinDurationAnalyser(),
@@ -28,7 +25,7 @@ public class SleepTrackerApp {
 
     public static void main(String[] args) {
         printMessage("начало работы.");
-        if (tryLoadLog()) {
+        if (tryLoadLog(args[0])) {
             printResults(analyse());
         }
         printMessage("завершение работы.");
@@ -38,10 +35,10 @@ public class SleepTrackerApp {
         System.out.printf("\u001B[32mSleepTrackerApp\u001B[0m: %s%n", message);
     }
 
-    private static boolean tryLoadLog() {
+    private static boolean tryLoadLog(String logPath) {
         try {
             printMessage("загрузка лога сна...");
-            sessions = new LogLoader().load(LOG_PATH);
+            sessions = new LogLoader().load(Paths.get(logPath));
             printMessage("лог файл загружен.");
             return true;
         } catch (RuntimeException e) {
@@ -64,11 +61,10 @@ public class SleepTrackerApp {
 
     private static void printResults(List<SleepAnalysisResult> results) {
         printMessage("вывод:");
-        IntStream.range(0, results.size())
-                .forEach(index -> {
-                    SleepAnalysisResult result = results.get(index);
-                    printResult(result, index + 1);
-                });
+        int resultsCount = results.size();
+        for (int i = 0; i < resultsCount; i++) {
+            printResult(results.get(i), i + 1);
+        }
     }
 
     private static void printResult(SleepAnalysisResult result, int order) {

@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static ru.yandex.practicum.sleeptracker.Tests.create;
+import static ru.yandex.practicum.sleeptracker.utils.UtilityTest.create;
 
 public class SleeplessNightsAnalyserTest {
     private static final SleeplessNightsAnalyser ANALYSER = new SleeplessNightsAnalyser();

@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.function.Function;
 
 public class ChronotypeAnalyser implements Function<List<SleepingSession>, SleepAnalysisResult> {
+    private static final String DESCRIPTION = "хронотип";
     private static final LocalTime OWL_LEFT = LocalTime.of(23, 0);
     private static final LocalTime OWL_RIGHT = LocalTime.of(9, 0);
     private static final LocalTime LARK_LEFT = LocalTime.of(22, 0);
@@ -22,7 +23,7 @@ public class ChronotypeAnalyser implements Function<List<SleepingSession>, Sleep
         initialize();
         sessions.forEach(this::analyseSession);
         String chronotype = analyseCounters();
-        return new SleepAnalysisResult("хронотип", chronotype);
+        return new SleepAnalysisResult(DESCRIPTION, chronotype);
     }
 
     private void initialize() {

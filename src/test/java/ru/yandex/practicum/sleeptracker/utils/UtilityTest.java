@@ -1,4 +1,4 @@
-package ru.yandex.practicum.sleeptracker;
+package ru.yandex.practicum.sleeptracker.utils;
 
 import ru.yandex.practicum.sleeptracker.session.SleepQuality;
 import ru.yandex.practicum.sleeptracker.session.SleepingSession;
@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
-public class Tests {
+public class UtilityTest {
     private static final LocalDate FIRST_DAY = LocalDate.of(2026, 1, 21);
 
     public static SleepingSession create() {

@@ -7,7 +7,7 @@ import ru.yandex.practicum.sleeptracker.session.SleepingSession;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static ru.yandex.practicum.sleeptracker.Tests.create;
+import static ru.yandex.practicum.sleeptracker.utils.UtilityTest.create;
 
 public class SessionsAmountAnalyserTest {
     private static final SessionsAmountAnalyser ANALYSER = new SessionsAmountAnalyser();

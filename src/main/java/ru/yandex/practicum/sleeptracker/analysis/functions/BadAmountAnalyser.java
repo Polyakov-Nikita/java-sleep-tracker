@@ -8,11 +8,11 @@ import java.util.List;
 import java.util.function.Function;
 
 public class BadAmountAnalyser implements Function<List<SleepingSession>, SleepAnalysisResult> {
+    private static final String DESCRIPTION = "количество сессий с плохим качеством сна";
+
     @Override
     public SleepAnalysisResult apply(List<SleepingSession> sessions) {
-        int amount = sessions.stream()
-                .filter(session -> session.quality == SleepQuality.BAD)
-                .toList().size();
-        return new SleepAnalysisResult("количество сессий с плохим качеством сна", Integer.toString(amount));
+        long amount = sessions.stream().filter(session -> session.quality == SleepQuality.BAD).count();
+        return new SleepAnalysisResult(DESCRIPTION, Long.toString(amount));
     }
 }
